@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import os
 
 st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
@@ -18,7 +19,9 @@ if st.button("Analyze Resume", type="primary"):
                 files = {"resume": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")}
                 data = {"job_description": job_description}
                 
-                response = requests.post("http://127.0.0.1:8000/analyze", files=files, data=data)
+                BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
+                
+                response = requests.post(f"{BACKEND_URL}/analyze", files=files, data=data)
                 
                 if response.status_code == 200:
                     result = response.json()
