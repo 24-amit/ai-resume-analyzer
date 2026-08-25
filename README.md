@@ -1,8 +1,10 @@
 # 📄 AI Resume Analyzer (RAG + LLM)
 
+[![Live App](https://img.shields.io/badge/Live_App-Render-blue?style=for-the-badge&logo=render)](https://ai-resume-frontend-weii.onrender.com/)
+
 An end-to-end Retrieval-Augmented Generation (RAG) application that analyzes PDF resumes against job descriptions to produce match scores, skill gap breakdowns, and actionable recommendations.
 
-Built with **FastAPI**, **ChromaDB**, **Streamlit**, and **Google Gemini API**.
+🌐 **Live Application:** [https://ai-resume-frontend-weii.onrender.com/](https://ai-resume-frontend-weii.onrender.com/)
 
 ---
 
